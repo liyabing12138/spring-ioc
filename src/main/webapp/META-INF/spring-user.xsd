@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://test.hatter.me/schema/test"  
+    xmlns:tns="http://test.hatter.me/schema/test" elementFormDefault="qualified">  
+    <element name="test">  
+        <complexType>  
+            <attribute name="id" type="string" />  
+            <attribute name="name" type="string" />  
+        </complexType>  
+    </element>  
+</schema>  
