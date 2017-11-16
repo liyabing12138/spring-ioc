@@ -4,24 +4,26 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
+
+import com.spring.test.pojo.GetBeanTest;
 import com.spring.test.pojo.People;
 
 public class CustomHandler {
 	
 	public static void main(String[] args) {
 		
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("customer.xml");  
-		People p = (People)ctx.getBean("cutesource");  
-		System.out.println(p.getId());  
-		System.out.println(p.getName());  
-		System.out.println(p.getAge()); 
+        ApplicationContext ctx1 = new ClassPathXmlApplicationContext("customer.xml");  
+		People p1 = (People)ctx1.getBean("cutesource");  
+		System.out.println(p1.getId());  
+		System.out.println(p1.getName());  
+		System.out.println(p1.getAge()); 
 		
-//		ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:spring/springmvc.xml");  
+		ApplicationContext ctx2 = new ClassPathXmlApplicationContext("classpath:springmvc.xml");  
 //		
 //		ApplicationContext ctx2 = new FileSystemXmlApplicationContext("file://d:/spring.xml");
 //		
-//		GetBeanTest p = (GetBeanTest)ctx.getBean("people");  
-//		 p.getBean().showMe();
+		GetBeanTest p2 = (GetBeanTest)ctx2.getBean("people");  
+		 p2.getBean().showMe();
 	}
 
 }
