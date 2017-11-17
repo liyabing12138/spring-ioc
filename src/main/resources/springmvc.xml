@@ -19,5 +19,10 @@
       <bean id="student"  class="com.spring.test.pojo.Student">
      </bean> 
 
+  <bean class="com.spring.test.interf.MessageServiceDBImpl" autowire-candidate="false" />
+ 
+  <bean class="com.spring.test.interf.MessageServiceFileImpl"  />
+  
+  <bean class="com.spring.test.interf.MessagePrinter"/>
 	
 </beans>

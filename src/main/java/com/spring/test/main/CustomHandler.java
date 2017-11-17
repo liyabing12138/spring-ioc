@@ -5,6 +5,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
 
+
+import com.spring.test.interf.MessagePrinter;
 import com.spring.test.pojo.GetBeanTest;
 import com.spring.test.pojo.People;
 
@@ -24,6 +26,17 @@ public class CustomHandler {
 //		
 		GetBeanTest p2 = (GetBeanTest)ctx2.getBean("people");  
 		 p2.getBean().showMe();
+		 
+		 
+		 
+	  // 实例化 Spring IoC 容器
+        ApplicationContext context = new ClassPathXmlApplicationContext("springmvc.xml");
+
+        // 从容器中获得 MessagePrinter 的实例
+        MessagePrinter printer = context.getBean(MessagePrinter.class);
+
+        // 使用对象
+        printer.printMessage();
 	}
 
 }
